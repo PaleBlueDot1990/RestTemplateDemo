@@ -6,22 +6,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/restApi",
+@RequestMapping(path = "/restApi1",
                 produces = "application/json")
-public class RestApiController
+public class RestApi1
 {
-    @GetMapping(path = "/getData")
+    @GetMapping(path = "/getData1")
     public UserData get()
     {
         UserData userData = new UserData();
         userData.setId("1");
         userData.setUserName("Bhuvnesh Bhuwan");
-        userData.setData("Data Sent by Rest-API");
+        userData.setData("Rest Template Demo");
 
         return userData;
     }
 
-    @PostMapping(path = "/postData")
+    @PostMapping(path = "/postData1")
     public ResponseEntity<UserData> post(@RequestBody UserData userData)
     {
         HttpHeaders headers = new HttpHeaders();
